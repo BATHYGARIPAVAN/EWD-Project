@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --primary: #0E7C7B;
+    --primary-dark: #0A5E5D;
+    --secondary: #1F3B4D;
+    --accent: #F2A93B;
+    --accent-hover: #D98E20;
+    --surface-light: #F7FAFA;
+    --surface-card: #FFFFFF;
+    --surface-dark: #12232E;
+  }
+
+  body {
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    color: #1F3B4D;
+    background-color: #F7FAFA;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    letter-spacing: -0.025em;
+  }
+}
+
+.font-heading {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+}
+
+.font-body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+.font-mono {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #EAF3F3;
+}
+::-webkit-scrollbar-thumb {
+  background: #B4D5D5;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #0E7C7B;
+}
+
+/* Subtle card & interactive utility classes */
+.card-feel-good {
+  background-color: #ffffff;
+  border: 1px solid #EAF3F3;
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 20px -2px rgba(18, 35, 46, 0.05);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-feel-good:hover {
+  transform: translateY(-3px);
+  border-color: rgba(14, 124, 123, 0.3);
+  box-shadow: 0 12px 30px -4px rgba(18, 35, 46, 0.1);
+}
+
+.card-feel-good-dark {
+  background-color: #12232E;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1.5rem;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+}
+
+@keyframes pulse-subtle {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.88; transform: scale(1.015); }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 4s ease-in-out infinite;
+}
+
